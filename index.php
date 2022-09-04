@@ -17,7 +17,7 @@ $ambilDataBarang = mysqli_query($mysqli, "SELECT * FROM barang ORDER BY harga_ba
     <table width='80%' border=1>
 
     <tr>
-        <th>Nama Barang</th>
+        <th>Nama Barang Test</th>
         <th>Jenis Barang</th> 
         <th>Expired</th> 
         <th>Harga Barang</th> 
