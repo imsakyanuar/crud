@@ -1,3 +1,4 @@
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <?php
 //Di file ini digunakan untuk melakukan Query Insert Data Ke Database
 require 'koneksi-database.php';
@@ -20,12 +21,11 @@ if(isset($_POST['Submit'])) {
 
    
     // Show message when user added
-    echo "User added successfully. <a href='index.php'>View Data Barang</a>";
+
+    
+    header("Location: index.php");
 
 }
-
-
-// Query input data ke database 
 
 
 

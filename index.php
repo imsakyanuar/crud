@@ -10,14 +10,18 @@ $ambilDataBarang = mysqli_query($mysqli, "SELECT * FROM barang ORDER BY harga_ba
 <head>    
     <title>Homepage</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-
+<style>
+    .custom th, .custom td {
+        text-align: center;
+    }
+</style>
 </head>
  
 <body>
     
  <div class="container">
-    <a class="btn btn-primary mt-5 mb-5" href="add.php">Menambah Data Barang</a>
-        <table class="table">
+    <a class="btn btn-primary mt-5 mb-5" href="tampilan-tambah-data.php">Menambah Data Barang</a>
+        <table class="table custom">
             <thead>
                 <tr>
                     <th>Nama Barang Test</th>
@@ -37,13 +41,14 @@ $ambilDataBarang = mysqli_query($mysqli, "SELECT * FROM barang ORDER BY harga_ba
                     <td><?php echo $detailBarang['harga_barang'] ?></td>
                     <td><?php echo $detailBarang['jumlah_barang'] ?></td>
                     <td>
-                        <button class="btn btn-success" type="submit">Update</button>
-                        <button class="btn btn-danger" type="submit">Hapus</button>
+                        <a class="btn btn-success" href='tampilan-update-data.php?id=<?php echo $detailBarang['id'] ?>'>Update</a>
+                        <a class="btn btn-danger" href='delete.php?id=<?php echo $detailBarang['id'] ?>'>Hapus</a>
                     </td>
                 </tr>
                 <?php } ?>
             </tbody>
         </table>
  </div>
+ <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>

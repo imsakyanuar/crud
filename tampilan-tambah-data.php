@@ -9,8 +9,15 @@
 </head>
 <body>
 
-<div class="container">
-   <form action="input-data.php" method="post">
+<div class="container mt-3">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Tambah Barang</li>
+        </ol>
+    </nav>
+
+   <form action="proses-input-data.php" method="post">
     <div class="form-group">
         <label>Nama Barang</label>
         <input class="form-control" type="text" name="nama_barang">
@@ -35,10 +42,6 @@
    </form>
 </div>
     
-
-
-
-
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </body>
